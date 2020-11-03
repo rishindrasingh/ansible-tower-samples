@@ -1,0 +1,7 @@
+- name: Sample archive files
+  hosts: all
+  tasks:
+    - name: Archieve files 
+	  copy:
+        src: /opt/test/src/a-*
+        dest: /opt/test/dist
