@@ -4,6 +4,6 @@
   become: true
   tasks:
   - name: Archieve files 
-	copy:
+    copy:
       src: /opt/test/src/a-*
       dest: /opt/test/dist
