@@ -1,9 +1,7 @@
 ---
 - name: Sample archive files
   hosts: all
-  become: true
   tasks:
-  - name: Archieve files 
-    copy:
-      src: /opt/test/src/a-*
-      dest: /opt/test/dist
+    - copy:
+        src: /opt/test/src/a.txt
+        dest: /opt/test/dist/a.txt
