@@ -10,6 +10,6 @@
       patterns: 'a-*'
       register: file_to_copy
   - copy: 
-      src: {{ item.paths }} 
+      src: "{{ item.paths }}" 
       dest: /opt/test/dist
       with_items: "{{ file_to_copy.files }}"
