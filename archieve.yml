@@ -7,5 +7,7 @@
   - copy:
       src: "{{ item }}"
       dest: "/var/log/archieve_messsage"
+      owner: "root"
+      mode: 0600
     with_fileglob:
       - "/var/log/messages"
