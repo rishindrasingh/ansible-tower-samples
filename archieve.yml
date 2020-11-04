@@ -6,7 +6,7 @@
   tasks:
   - copy:
       src: "{{ item }}"
-      dest: "/var/log/archieve_messsage"
+      dest: "/opt/test/dist"
       owner: "root"
       mode: 0600
     with_fileglob:
