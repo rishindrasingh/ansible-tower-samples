@@ -4,6 +4,6 @@
   become: true
   
   tasks:
-  community.general.archive:
-    path: /opt/test/src
-    format: zip
+  -  community.general.archive:
+      path: /opt/test/src
+      format: zip
