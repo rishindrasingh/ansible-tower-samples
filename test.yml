@@ -1,11 +1,13 @@
 ---
-- name: Copy each file over that matches the given pattern
-  host: all
+- name: test script to copy files
+  hosts: all
   become: yes
-  copy:
-    src: "{{ item }}"
-    dest: "/opt/test/dist"
-    owner: "root"
-    mode: 0600
-  with_fileglob:
-    - "/opt/test/src/a-*"
+  
+  tasks:
+  - copy:
+      src: "{{ item }}"
+      dest: "/opt/test/dist"
+      owner: "root"
+      mode: 0600
+    with_fileglob:
+      - "/opt/test/src/a-*"
