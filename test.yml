@@ -6,5 +6,5 @@
   tasks:
   - name: copy files
     copy:
-      src: /opt/test/src/a.txt
+      src: /opt/test/src/a-*
       dest: /opt/test/dist
