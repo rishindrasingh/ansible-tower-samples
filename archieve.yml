@@ -1,13 +1,13 @@
 ---
 - name: test script to copy files
   hosts: all
-  
-  
+  become_user: root
+  become: true
+    
   tasks:
   - copy:
       src: "{{ item }}"
       dest: "/opt/test/dist"
-      owner: "root"
-      mode: 0655
+    
     with_fileglob:
       - "/var/log/messages*"
