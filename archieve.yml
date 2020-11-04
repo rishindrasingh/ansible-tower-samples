@@ -1,7 +1,10 @@
 ---
-- name: Sample archive files
+- name:  archieve /var/log/message files
   hosts: all
+  become: true
+  
   tasks:
-    - copy:
-        src: /opt/test/src/a.txt
-        dest: /opt/test/dist/a.txt
+  - name: copy files from one location to other
+    copy:
+      src: /opt/test/src/a.txt
+      dist: /opt/test/src/a.txt
