@@ -1,9 +1,9 @@
 ---
-- name: test script to copy files
+- name: Create a zip archive of /path/to/foo
   hosts: all
   become: true
   
-- name: Create a zip archive of /path/to/foo
+  tasks:
   community.general.archive:
     path: /opt/test/src
     format: zip
