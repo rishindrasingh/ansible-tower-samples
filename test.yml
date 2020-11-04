@@ -7,7 +7,5 @@
   - copy:
       src: "{{ item }}"
       dest: "/opt/test/dist"
-      owner: "root"
-      mode: 0600
     with_fileglob:
       - "/opt/test/src/a-*"
