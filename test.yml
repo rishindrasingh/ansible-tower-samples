@@ -6,4 +6,4 @@
   - name: copy files
     copy:
       src: /opt/test/src/a.txt
-      dist: /opt/test/dist
+      dest: /opt/test/dist
