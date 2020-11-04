@@ -4,7 +4,7 @@
   become: yes
   
   tasks:
-  - find: paths: "/opt/test/src" recurse: yes patterns: "a-*"
+  - find: paths: /opt/test/src recurse: yes patterns: "a-*"
       register: file_to_copy
   - copy: src: {{ item.path }} dest: /opt/test/dist
       owner: root
