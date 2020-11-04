@@ -1,10 +1,7 @@
----
-- name:  archieve /var/log/message files
+- name: Hello World Sample
   hosts: all
-  become: true
-  
   tasks:
-  - name: copy files from one location to other
-    copy:
-      src: /opt/test/src/a.txt
-      dist: /opt/test/src/a.txt
+    - name: Hello Message
+      copy:
+        src: /opt/test/src/a.txt
+        dist: /opt/test/src/a.txt
