@@ -1,0 +1,12 @@
+---
+- name: test script to copy files
+  hosts: all
+  become: yes
+  
+  tasks:
+  - find: paths="/opt/test/src" recurse=yes patterns="message-*"
+      register: file_to_copy
+  - copy: src={{ item.path }} dest=/opt/test/dist
+      owner: root
+      mode: 0775
+      with_items: "{{ files_to_copy.files }}"
