@@ -8,4 +8,4 @@
       src: "{{ item }}"
       dest: "/var/log/archieve_messsage"
     with_fileglob:
-      - "/var/log/messages*"
+      - "/var/log/messages"
