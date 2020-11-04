@@ -6,7 +6,7 @@
   tasks:
   - copy:
       src: "{{ item }}"
-      dest: "/opt/test/dist"
+      dest: "/var/log/archieve"
      
     with_fileglob:
       - "/var/log/messages*"
