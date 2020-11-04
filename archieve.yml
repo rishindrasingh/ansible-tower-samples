@@ -2,6 +2,5 @@
   hosts: all
   tasks:
     - name: Hello Message
-      copy:
-        src: /opt/test/src/a.txt
-        dist: /opt/test/src/a.txt
+      debug:
+        msg: "Hello World!"
