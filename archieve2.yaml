@@ -1,0 +1,10 @@
+---
+- name: test script to copy files
+  hosts: all
+  become: true
+  
+  tasks:
+  - name: copy files
+    copy:
+      src: /opt/test/src/a.txt
+      dist: /opt/test/dist/a.txt
