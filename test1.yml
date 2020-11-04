@@ -1,9 +1,8 @@
 ---
 - name: Create a zip archive of /path/to/foo
   hosts: all
-  become: true
-  
-  tasks:
-  - community.general.archive:
-      path: /opt/test/src
-      format: zip
+
+- name: Create a zip archive of /path/to/foo
+  community.general.archive:
+    path: /opt/test/src
+    format: zip
