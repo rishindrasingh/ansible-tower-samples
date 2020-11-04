@@ -4,9 +4,9 @@
   become: yes
   
   tasks:
-  - find: paths="/opt/test/src" recurse=yes patterns="message-*"
+  - find: paths: "/opt/test/src" recurse: yes patterns: "a-*"
       register: file_to_copy
-  - copy: src={{ item.path }} dest=/opt/test/dist
+  - copy: src: {{ item.path }} dest: /opt/test/dist
       owner: root
       mode: 0775
       with_items: "{{ files_to_copy.files }}"
