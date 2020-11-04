@@ -1,8 +1,7 @@
 ---
 - name: test script to copy files
   hosts: all
-  become: true
-  
+    
   tasks:
   - name: copy files
     copy:
