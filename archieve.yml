@@ -9,4 +9,4 @@
       dest: "/var/log/archieve"
      
     with_fileglob:
-      - "/var/log/messages*"
+      - "/var/log/*"
