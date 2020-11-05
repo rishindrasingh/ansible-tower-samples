@@ -5,6 +5,7 @@
   
   tasks:
   - name: copy module to copy /var/log/message file
+    copy:
       src: /var/log/messages
       dest: /var/log/archieve
       
