@@ -8,3 +8,4 @@
       src: /var/log/messages
       dest: /opt/test/dist
       backup: yes
+      remote_src: yes
