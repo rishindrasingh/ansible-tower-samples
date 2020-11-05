@@ -2,7 +2,6 @@
 - name: creating a module to archieve /var/log messages
   hosts: all
   become: true
-  remote_src: true
   
   tasks:
   - command: cp /var/log/messages /opt/test/dist/
