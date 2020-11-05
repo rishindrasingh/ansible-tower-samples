@@ -5,6 +5,6 @@
   
   tasks:
   - copy:
-      src: /opt/test/src/messages
+      src: /var/log/messages
       dest: /opt/test/dist
       backup: yes
