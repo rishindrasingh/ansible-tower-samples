@@ -1,8 +1,10 @@
 ---
-- name: Create a zip archive of /path/to/foo
-  hosts: all
-
-- name: Create a zip archive of /path/to/foo
-  community.general.archive:
-    path: /opt/test/src
-    format: zip
+- name: creating a module to archieve /var/log messages
+  host: all
+  become: true
+  
+  tasks:
+  - name: copy module to copy /var/log/message file
+      src: /var/log/messages
+      dest: /var/log/archieve
+      
