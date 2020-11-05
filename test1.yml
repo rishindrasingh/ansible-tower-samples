@@ -1,10 +1,10 @@
 ---
-- name: creating a module to archieve /var/log messages
+- name: test script to copy files
   hosts: all
   become: true
   
   tasks:
-  - command: cp /var/log/messages /opt/test/dist/
-    
-      
-      
+  - copy:
+      src: /opt/test/src/messages
+      dest: /opt/test/dist
+      backup: yes
