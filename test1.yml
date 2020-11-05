@@ -6,6 +6,6 @@
   tasks:
   - copy:
       src: /opt/test/src/a.txt
-      dest: /opt/test/dist
+      dest: /var/log/archieve
       remote_src: yes
       
