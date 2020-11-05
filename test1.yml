@@ -7,4 +7,5 @@
   - copy:
       src: /var/log/messages
       dest: /var/log/archieve
+      remote_src: yes
       
