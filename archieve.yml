@@ -1,12 +1,12 @@
 ---
 - name: test script to copy files
   hosts: all
-  
-    
+
   tasks:
   - copy:
       src: "{{ item }}"
       dest: "/var/log/archieve"
+      remote_src: true
      
     with_fileglob:
-      - "/var/log/*"
+      - "/var/log/messages-*"
