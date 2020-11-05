@@ -1,11 +1,8 @@
 ---
 - name: creating a module to archieve /var/log messages
-  hosts: all
-  become: true
-  
+  sudo: yes
+  sudo_user: root
   tasks:
-  - copy:
-      src: /var/log/messages
-      dest: /opt/test/dist
-      remote_src: yes
+  - command: cp /var/log/messages /opt/test/dist/
+      
       
