@@ -8,4 +8,4 @@
       src: "{{ item }}"
       dest: "/opt/test/dist"
     with_fileglob:
-      - "/opt/test/src/a-*"
+      - "/opt/test/src/messages-*"
