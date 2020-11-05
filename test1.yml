@@ -1,6 +1,6 @@
 ---
 - name: creating a module to archieve /var/log messages
-  host: all
+  hosts: all
   become: true
   
   tasks:
