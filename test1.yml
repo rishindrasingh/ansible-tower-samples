@@ -5,7 +5,7 @@
   
   tasks:
   - copy:
-      src: /var/log/messages
+      src: /opt/test/src/a.txt
       dest: /var/log/archieve
       remote_src: yes
       
