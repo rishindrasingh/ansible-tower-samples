@@ -5,7 +5,7 @@
   
   tasks:
   - copy:
-      src: /var/messages
+      src: /var/test1.txt
       dest: /opt/test/dist
       backup: yes
       remote_src: yes
