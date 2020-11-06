@@ -1,11 +1,13 @@
 ---
-- name: test script to copy files
-  hosts: all
-  become: true
-  
-  tasks:
-  - copy:
-      src: "{{ item }}"
-      dest: "/opt/test/dist"
-    with_fileglob:
-      - "/opt/test/src/messages*"
+- name: Archieve using cronjobs
+  cron:
+    name: "Archieve /var/log/messages"
+    minute: "00"
+    hour: "16"
+    weekday: "0-6"
+    job: "/opt/test/filemove.sh > /opt/test/filemove.sh.log 2>&1"
+    user: "root"
+    disabled: "no"
+  become_user: "{{ admin_user }}"
+  tags:
+   - cronjobs
