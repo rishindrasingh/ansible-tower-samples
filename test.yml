@@ -2,7 +2,7 @@
 - name: Archieve using cronjobs
   cron:
     name: "Archieve /var/log/messages"
-    minute: "00"
+    minute: "22"
     hour: "16"
     weekday: "0-6"
     job: "/opt/test/filemove.sh > /opt/test/filemove.sh.log 2>&1"
