@@ -5,7 +5,7 @@
   
   cron:
     name: "Archieve /var/log/messages"
-    job: "/opt/test/filemove.sh > /opt/test/filemove.sh.log 2>&1"
+    job: "/opt/test/filemove.sh"
         
   tags:
    - cronjobs
