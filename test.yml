@@ -1,11 +1,12 @@
+  
 ---
 - name: Archieve using cronjobs
   hosts: all
   become: true
   
-  cron:
-    name: "Archieve /var/log/messages"
-    job: "/opt/test/filemove.sh"
+  tasks:
+  - cron:
+      name: "Archieve /var/log/messages"
+      job: "/opt/test/filemove.sh"
         
-  tags:
-   - cronjobs
+  
