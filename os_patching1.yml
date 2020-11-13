@@ -51,4 +51,4 @@
           delay=15
           timeout=300
           state=started
-      when: reboot_started|changed
+      when: reboot_started
