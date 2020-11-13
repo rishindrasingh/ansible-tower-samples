@@ -2,7 +2,7 @@
 ## Demo Ansible Playbook to perform patching on RHEl/CentOS Server
 
 - hosts: all
-  become_user: root
+  become_user: true
   serial: 2
 
 
